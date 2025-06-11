@@ -114,11 +114,12 @@ body {
 }
 
 #face-div {
-    width: 70%;
+    width: 125px;
+    height: 125px;
 }
 
 #head {
-    width: 100%;
+    width: 125px;
     height: fit-content;
     background-color: yellow;
     padding-top: 10px;
