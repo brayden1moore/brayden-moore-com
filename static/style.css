@@ -253,8 +253,7 @@ a:hover {
 .work-description {
   display: none;
   opacity: 0;
-  font-size: 8pt;
-  font-style: italic;
+  font-size: 9pt;
 }
 
 .an-org:hover .work-description {
