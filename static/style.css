@@ -215,8 +215,8 @@ a:hover {
   padding: 0.5rem;
   box-sizing: border-box;
   cursor: pointer;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   margin-right: 16px;
   font-size: 10pt;
   transform: none !important;
@@ -235,6 +235,9 @@ a:hover {
 }
 
 .play-name {
+  background-color: black;
+  text-align: center;
+  color: white;
   border-bottom: 1px solid black;
 }
 
@@ -280,7 +283,7 @@ a:hover {
     width: calc(100% - 0.5rem);      
     padding: 1rem;  
     border: 1px black solid;
-    background-color: yellow;
+    background-color: white;
     box-sizing: border-box;
     align-content: center;
 }
@@ -347,7 +350,7 @@ a:hover {
     border: 1px black solid;
     box-sizing: border-box;
     justify-content: center; 
-    background-color: yellow;
+    background-color: white;
 }
 
 .a-play:hover {
