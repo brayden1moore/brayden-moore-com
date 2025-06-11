@@ -39,7 +39,7 @@ body {
 }
 #nav-bar {
     display: flex;
-    height: 80px;
+    height: 110px;
     align-items: center;
     border-bottom: black 1px solid;
     position: fixed;
