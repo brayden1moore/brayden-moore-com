@@ -395,7 +395,7 @@ a:hover {
   justify-content: center;
 }
 
-.easeload{
+.easeload {
     transition: all 0.5s ease;
     opacity: 0;
     -webkit-transition: all 0.5s ease; 
@@ -486,6 +486,14 @@ a:hover {
   .a-testimonial {
     font-size: 14pt;
     width: calc(33% - 0.5rem);
+  }
+
+  #contact {
+    width: fit-content;
+  }
+
+  .contact-div {
+    width: 100%;
   }
 
 }
