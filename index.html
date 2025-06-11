@@ -20,11 +20,12 @@
 
 </head>
 <body>
-  <div id="nav-bar">
-    <div class="nav-button" data-page="about.html">ABOUT</div>
-    <div class="nav-button" data-page="work.html">WORK</div>
-    <div class="nav-button" data-page="play.html">PLAY</div>
-    <div class="nav-button" data-page="contact.html">CONTACT</div>
+  <div id="top-bar">
+    <img id="logo" src="static/icon.png"></img>
+      <div class="nav-button" data-page="about.html">ABOUT</div>
+      <div class="nav-button" data-page="work.html">WORK</div>
+      <div class="nav-button" data-page="play.html">PLAY</div>
+      <div class="nav-button" data-page="contact.html">CONTACT</div>
   </div>
 
   <iframe id="main-frame" src="about.html"></iframe>
@@ -58,6 +59,8 @@ window.addEventListener('message', function(e) {
         frame.src = data;
     }
 }, false);
+
+
 
 </script>
 </html>
