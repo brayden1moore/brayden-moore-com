@@ -72,7 +72,7 @@ body {
     color: black;
 }
 :root {
-    --side-padding: 5vw;
+    --side-padding: 8vw;
 }
 #footer {
     -webkit-box-pack: center;
@@ -91,7 +91,7 @@ body {
     font-size: 12pt;
 }
 #intro-div {
-    line-height: 1.2em;
+    line-height: 1.3em;
     margin-top: 30px;
     height: 100%;
     font-size: 12pt;
@@ -140,6 +140,8 @@ body {
     margin-bottom: 30px;
 }
 .header {
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
     font-size: 32pt;
     font-family: 'Andale Mono';
 }
@@ -150,7 +152,6 @@ li {
 }
 a {
     color: black;
-    background-color: yellow;
     text-decoration: none;
     cursor: pointer;
     border-bottom: 1px solid black;
@@ -175,8 +176,22 @@ a:hover {
     display: block;
 }
 .highlight {
-    background-color: yellow;
+  text-decoration: none;
+  color: white;
+  background-color: black;
 }
+
+.highlight-yellow {
+  text-decoration: none;
+  color: black;
+  background-color: yellow;
+  width: 100%;
+}
+
+.larger-text {
+  font-size: 16pt;
+}
+
 .orgs-wrapper {
   display: grid;
   overflow: hidden;
@@ -211,7 +226,7 @@ a:hover {
   background-color: black;
   color: white;
   margin-right: 16px;
-  font-size: 11pt;
+  font-size: 10pt;
   transform: none !important;
   animation: none !important;
   will-change: transform;
@@ -228,7 +243,7 @@ a:hover {
 }
 
 .play-name {
-  font-size: 14pt;
+  border-bottom: 1px solid black;
 }
 
 .org-logo {
@@ -243,6 +258,7 @@ a:hover {
 .work-description {
   display: none;
   opacity: 0;
+  font-size: 10pt;
   font-style: italic;
 }
 
@@ -261,7 +277,7 @@ a:hover {
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 75px;
-    margin-top: 60px;
+    margin-top: 40px;
     box-sizing: border-box;
 }
 
@@ -294,8 +310,11 @@ a:hover {
 
 #work-tag {
     font-size: 12pt;
-    margin-bottom: 50px;
-    line-height: 1.2em;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    line-height: 1.3em;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
 }
 
 
@@ -344,6 +363,20 @@ a:hover {
   color: white;
 }
 
+.a-play:hover a{
+  background-color: white;
+  color: black;
+}
+
+.a-play:hover a:hover{
+  background-color: yellow;
+  color: black;
+}
+
+.a-play:hover .play-name {
+  border-bottom: 1px solid white;
+}
+
 .a-play:hover .play-img {
     border: 1px black solid;
 }
@@ -358,7 +391,7 @@ a:hover {
   margin: 40px;
   margin-left: 0px;
   width: 90%;
-  line-height: 1.2rem;
+  line-height: 1.3rem;
 }
 
 .contact-div:hover {
@@ -428,10 +461,6 @@ a:hover {
     width: 80px;
   }
 
-  :root {
-    --side-padding: 8%;
-  }
-
   #main-frame {
     margin-top: 100px;
   }
@@ -445,33 +474,16 @@ a:hover {
     font-size: 16pt;
   }
 
-  .header {
-    font-size: 32pt;
-  }
-
   #footer {
     font-size: 12pt;
   }
 
   #intro-div {
     margin-top: 0px;
-    font-size: 14pt;
   }
 
   .a-play {
     width: calc(25% - 2rem); 
-  }
-
-  .play-info {
-    font-size: 14pt;
-  }
-
-  .play-name {
-    font-size: 18pt;
-  }
-
-  #work-tag {
-    font-size: 14pt;
   }
 
   .an-org {
@@ -484,7 +496,6 @@ a:hover {
   }
 
   .a-testimonial {
-    font-size: 14pt;
     width: calc(33% - 0.5rem);
   }
 
