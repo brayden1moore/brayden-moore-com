@@ -104,10 +104,10 @@ foundationsText.addEventListener('click', () => {
 const socialIcons = document.querySelectorAll(".social-icon");
 socialIcons.forEach(icon => {
     icon.addEventListener('mouseover', () => {
-        icon.src = icon.src.replace("-t-w","-t-y");
+        icon.src = icon.src.replace("-t-w","-t-b");
     })
     icon.addEventListener('mouseout', () => {
-        icon.src = icon.src.replace("-t-y","-t-w");
+        icon.src = icon.src.replace("-t-b","-t-w");
     })
 })
 
