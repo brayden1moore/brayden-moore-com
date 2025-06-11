@@ -62,14 +62,14 @@ body {
     justify-content: center;
     height: 100%;
     cursor: pointer;
-    background-color: black;
-    color: white;
+    background-color: yellow;
+    color: black;
     border-left: 1px solid black;
     -webkit-tap-highlight-color: yellow;
 }
 .nav-button:hover {
-    background-color: yellow;
-    color: black;
+    background-color: black;
+    color: white;
 }
 :root {
     --side-padding: 8vw;
