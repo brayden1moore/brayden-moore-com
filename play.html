@@ -70,7 +70,7 @@
     }
     window.addEventListener('load', resize);
     window.addEventListener('resize', resize);
-    
+
 
 const playDivs = document.querySelectorAll(".a-play");
 playDivs.forEach(play => {
@@ -90,12 +90,5 @@ playDivs.forEach(play => {
     })
 })
 
-const touchHandler = (ev) => {
-	ev.preventDefault()
-}
-document.addEventListener('touchstart', touchHandler, {passive:false})
-document.addEventListener('touchmove', touchHandler, {passive:false})
-document.addEventListener('touchend', touchHandler, {passive:false})
-document.addEventListener('touchcancel', touchHandler, {passive:false})
 </script>
 </html>
