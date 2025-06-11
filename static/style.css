@@ -36,7 +36,7 @@ body {
 }
 #nav-bar {
     display: flex;
-    height: 50px;
+    height: 80px;
     align-items: center;
     border-bottom: black 1px solid;
     position: fixed;
@@ -44,19 +44,20 @@ body {
     z-index: 100;
 }
 .nav-button {
+    font-size: 18pt;
     flex: 1;
     text-align: center;
     align-items: center;
     align-content: center;
     height: 100%;
     cursor: pointer;
-    background-color: yellow;
-    color: black;
+    background-color: black;
+    color: white;
     border-left: 1px solid black;
 }
 .nav-button:hover {
-    background-color: black;
-    color: white;
+    background-color: yellow;
+    color: black;
 }
 :root {
     --side-padding: 10%;
@@ -317,12 +318,12 @@ a:hover {
     border: 1px black solid;
     box-sizing: border-box;
     justify-content: center; 
-    background-color: white;
+    background-color: yellow;
 }
 
 .a-play:hover {
-  background-color: yellow;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .a-play:hover .play-img {
@@ -402,7 +403,7 @@ a:hover {
   #up-right-arrow {
     display: block;
   }
-  
+
     .mobile-lb {
     display: block;
   }

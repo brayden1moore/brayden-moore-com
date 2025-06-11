@@ -21,7 +21,6 @@
 </head>
 <body>
   <div id="nav-bar">
-    <div id="logo">BRAYDEN MOORE</div>
     <div class="nav-button" data-page="about.html">ABOUT</div>
     <div class="nav-button" data-page="work.html">WORK</div>
     <div class="nav-button" data-page="play.html">PLAY</div>
@@ -46,12 +45,6 @@ document.querySelectorAll('.nav-button').forEach(btn => {
     frame.src = btn.dataset.page;
     window.scrollTo(0, 0);
   });
-});
-
-const logo = document.getElementById('logo');
-logo.addEventListener('click', () => {
-    frame.src = 'about.html';
-    window.scrollTo(0, 0);
 });
 
 window.addEventListener('message', function(e) {
