@@ -382,10 +382,6 @@ a:hover {
     :root {
         --side-padding: 5vw;
     }
-    #head {
-        height: 200px;
-        width: auto;
-    }
     .a-testimonial {
         width: calc(50% - 0.5rem);      
     }
