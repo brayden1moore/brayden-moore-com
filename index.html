@@ -46,12 +46,11 @@ document.querySelectorAll('.nav-button').forEach(btn => {
     frame.src = btn.dataset.page;
     window.scrollTo(0, 0);
 
-    btn.style.backgroundColor = "yellow";
-    btn.style.color = "black";
+    btn.classList.add('button-hovered');
     setInterval(
       function(){     
-        btn.style.backgroundColor = "black";
-        btn.style.color = "white"; },
+        btn.classList.remove('button-hovered');
+      },
       100
     );
   });

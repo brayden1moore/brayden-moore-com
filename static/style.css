@@ -30,6 +30,11 @@ body {
     margin-bottom: 75px;
 }
 
+.button-hovered {
+  background-color: yellow;
+  color: black;
+}
+
 #top-bar {
     display: -webkit-flex;
     height: 180px;
