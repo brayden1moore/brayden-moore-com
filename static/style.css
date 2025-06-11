@@ -17,8 +17,9 @@ body {
     height: 100%;
 }
 #logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
 }
 #main-frame {
     width: 100%;
@@ -37,7 +38,7 @@ body {
 
 #top-bar {
     display: -webkit-flex;
-    height: 80px;
+    height: 70px;
     align-items: center;
     -webkit-align-items: center;
     border-bottom: black 1px solid;
@@ -97,9 +98,6 @@ body {
     font-size: 12pt;
 }
 
-#about {
-  padding: 10px;
-}
 
 #about-top {
   display: block;
@@ -304,10 +302,6 @@ a:hover {
 }
 
 
-#work {
-  padding: 10px;
-}
-
 #work-tag {
     font-size: 12pt;
     margin-bottom: 40px;
@@ -325,9 +319,7 @@ a:hover {
     border: 1px solid black;
   }
 
-  #play {
-    padding: 10px;
-  }
+
 
   #play-table {
     display: flex;
@@ -350,7 +342,7 @@ a:hover {
 
 
 .a-play {
-    width: calc(100% - 1rem);      
+    width: calc(100%);      
     padding: 20px;  
     border: 1px black solid;
     box-sizing: border-box;
@@ -412,7 +404,6 @@ a:hover {
 
 #contact {
   width: 90%;
-  padding: 10px;
 }
 
 #big-circle {
@@ -457,7 +448,7 @@ a:hover {
   }
 
   #logo {
-    height: 80;
+    height: 80px;
     width: 80px;
   }
 
@@ -483,7 +474,7 @@ a:hover {
   }
 
   .a-play {
-    width: calc(25% - 2rem); 
+    width: calc(25% - 1.5rem); 
   }
 
   .an-org {
