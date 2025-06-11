@@ -395,6 +395,7 @@ a:hover {
   margin-left: 0px;
   margin-right: 0px;
   line-height: 1.3rem;
+  width: max-content;
 }
 
 #contact {
