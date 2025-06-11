@@ -348,6 +348,7 @@ a:hover {
 }
 
 .a-play {
+  user-select: none;
     width: calc(100%);      
     padding: 20px;  
     border: 1px black solid;
