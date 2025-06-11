@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact - Brayden Moore</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body style="height: 100%; overflow: hidden;">
+  <p class="header">CONTACT</p>
+    <div id="contact">
+
+        <div class="contact-div">
+            WORK-RELATED<br><br>
+            email: <a href="mailto:brayden@braydenmoore.com">brayden@braydenmoore.com</a><br>
+            social: <a target="_blank" href="https://www.linkedin.com/in/brayden1moore/">linkedin.com/in/brayden1moore</a><br>
+        </div>
+
+        <div class="contact-div">
+            PLAY-RELATED<br><br>
+            email: <a href="mailto:bmo@scudhouse.com">bmo@scudhouse.com</a><br>
+            social: <a target="_blank" href="https://www.instagram.com/scudhouse/">instagram.com/scudhouse</a><br>
+        </div>
+
+        <div class="contact-div other-links">
+            OTHER<br><br>
+            github: <a class="other-link" href="https://github.com/brayden1moore" target="_blank">github.com/brayden1moore</a><br>
+            soundcloud: <a class="other-link" href="https://soundcloud.com/888bmo" target="_blank">soundcloud.com/888bmo</a><br>
+            nina: <a class="other-link" href="https://www.ninaprotocol.com/profiles/bmo?tab=favorites" target="_blank">ninaprotocol.com/profiles/bmo</a><br>
+            bandcamp: <a class="other-link" href="https://bandcamp.com/brayden1moore" target="_blank">bandcamp.com/brayden1moore</a>
+        </div>
+    </div>
+</body>
+<script>
+    function resize() {
+    var height = document.documentElement.scrollHeight;
+    parent.postMessage(['setHeight', height], '*');
+}
+window.addEventListener('load', resize);
+window.addEventListener('resize', resize);
+</script>
+</html>

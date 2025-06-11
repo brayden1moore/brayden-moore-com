@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>About - Brayden Moore</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body style="height: 100%; overflow: hidden;">
+  <p class="header">ABOUT</p>
+    <div id="about">
+      <div id="about-top">
+        <img width="200px" height="200px" id="head" src="static/bmosubjectcolor2.png"><br><br class="mobile-lb"
+        <img id="up-right-arrow" src="static/arrow.svg"></img>
+        <img id="down-left-arrow" src="static/arrow.svg"></img>
+        <div id="intro-div">
+            <u>BRAYDEN MOORE</u><br>
+            <ul>
+              <li><span id="age">24</span><br><br></li>
+              <li>living in san francisco via providence via prague via new york via vermont<br><br></li>
+            </ul>
+            <u>WORK</u><br>
+            <ul>
+              <li>cleaning, migrating, and integrating data systems for non-profit <a id="foundations-text">foundations</a><br><br></li>
+              <li>managing ~1,600 acres of <a target="_blank" href="https://member.alaforestry.org/members/default.asp?id=27215454">forest land</a> in alabama<br><br></li>
+            </ul>
+            <u>PLAY</u><br>
+            <ul>
+              <li>making devices and apps for listening to and standardizing information for <a href="https://internetradioprotocol.org" target="_blank">internet radio</a><br><br></li>
+              <li>maintaining <a href="https://unsecuredcamera.com" target="_blank">unsecuredcamera.com</a>, a look through the lenses of internet-connected surveillance devices<br><br></li>
+              <li>spinning and recording <a href="https://www.youtube.com/playlist?list=PLbJFNczg9aumG4SAXuTSTnU4w9FHDm9dm" target="_blank">mixes</a> for friends and fun<br><br></li>
+            </ul>
+              <u>TOOLS</u><br>
+            <ul>
+              <li><u>programming</u>: python (pandas, flask, fastapi, pil, beautifulsoup, selenium), bash, nginx, systemd, javascript, html, css, sql, digitalocean<br><br></li>
+              <li><u>systems</u>: sage intacct (certified implementer), virtuous, salesforce, bloomerang, foundationhub, classy<br><br></li>
+              <li><u>creativity</u>: figma, ableton, freecad, rekordbox<br><br></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+</body>
+
+<script>
+const age = document.getElementById('age');
+const birthDay = new Date(2001, 2, 20, 11, 2);
+
+function updateAge() {
+  const now = new Date();
+
+  let years = now.getFullYear() - birthDay.getFullYear();
+  let months = now.getMonth() - birthDay.getMonth();
+  let days = now.getDate() - birthDay.getDate();
+  let hours = now.getHours() - birthDay.getHours();
+  let minutes = now.getMinutes() - birthDay.getMinutes();
+  let seconds = now.getSeconds() - birthDay.getSeconds();
+
+  if (seconds < 0) {
+    seconds += 60;
+    minutes--;
+  }
+  if (minutes < 0) {
+    minutes += 60;
+    hours--;
+  }
+  if (hours < 0) {
+    hours += 24;
+    days--;
+  }
+  if (days < 0) {
+    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+    days += prevMonth.getDate();
+    months--;
+  }
+  if (months < 0) {
+    months += 12;
+    years--;
+  }
+
+  age.textContent = `${years}y ${months}m ${days}d ${hours}h ${minutes}m ${seconds}s old`;
+}
+
+setInterval(updateAge, 1000);
+updateAge(); 
+</script>
+
+<script>
+function resize() {
+    var height = document.documentElement.scrollHeight;
+    parent.postMessage(['setHeight', height], '*');
+}
+window.addEventListener('load', resize);
+window.addEventListener('resize', resize);
+
+const foundationsText = document.getElementById('foundations-text');
+foundationsText.addEventListener('click', () => {
+    parent.postMessage(['changePage','work.html'], '*');
+})
+
+</script>
+
+</html>

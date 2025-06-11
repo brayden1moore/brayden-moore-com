@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Brayden Moore</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body style="height: 100%; overflow: hidden;">
+
+<div id="main">
+    <div id="big-circle" class="rotating">
+    </div>
+</div>
+
+</body>
+<script>
+    function resize() {
+    var height = document.documentElement.scrollHeight;
+    parent.postMessage(['setHeight', height], '*');
+}
+window.addEventListener('load', resize);
+window.addEventListener('resize', resize);
+</script>
+</html>
