@@ -399,7 +399,6 @@ a:hover {
   margin-left: 0px;
   margin-right: 0px;
   line-height: 1.3rem;
-  width: max-content;
 }
 
 #contact {
@@ -486,6 +485,10 @@ a:hover {
   padding-right: 50px;
   margin-right: 50px;
   margin-bottom: 0px;
+ }
+
+ .contact-div {
+    width: 33%;
  }
 
   #about-top {
