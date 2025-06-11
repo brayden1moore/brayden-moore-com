@@ -395,7 +395,8 @@ a:hover {
     }
 }
 
-@media (max-width: 800px) {
+@media only screen and (orientation: portrait) {
+
 
     #about-top {
     display: block;
