@@ -40,9 +40,14 @@
 <script>
 
 const frame = document.getElementById('main-frame');
+let frameSrc = sessionStorage.getItem('frame') ?? 'about.html'
+frame.src = frameSrc;
+
+
 document.querySelectorAll('.nav-button').forEach(btn => {
   btn.addEventListener('click', () => {
     frame.src = btn.dataset.page;
+    sessionStorage.setItem('frame', btn.dataset.page)
     window.scrollTo(0, 0);
 
     btn.classList.add('button-hovered');
@@ -72,6 +77,12 @@ window.addEventListener('message', function(e) {
     }
 }, false);
 
+console.info(performance.navigation.type);
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  console.info( "This page is reloaded" );
+} else {
+  console.info( "This page is not reloaded");
+}
 
 
 </script>

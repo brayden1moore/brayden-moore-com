@@ -103,7 +103,7 @@ body {
   display: block;
 }
 #down-left-arrow {
-  display: none;
+  display: block;
 }
 #up-right-arrow {
   display: block;
@@ -113,7 +113,7 @@ body {
 }
 
 #head {
-    width: 45%;
+    width: 33%;
     height: fit-content;
     background-color: yellow;
     padding-top: 10px;
@@ -340,6 +340,11 @@ a:hover {
   font-size: 16pt;
 }
 
+#name-and-face {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 50px;
+}
 
 .a-play {
     width: calc(100%);      
@@ -376,11 +381,10 @@ a:hover {
 
 .contact-div {
   font-size: 10pt;
-  background-color: yellow;
   padding: 20px;
   border: 1px solid black;
   color: black;
-  margin: 40px;
+  margin: 20px;
   margin-left: 0px;
   width: 90%;
   line-height: 1.3rem;
@@ -435,6 +439,15 @@ a:hover {
 }
 
 @media screen and (min-width: 768px) {
+
+  #name-and-face {
+  border-bottom: none;
+  border-right: 1px solid black;
+  padding-bottom: 0px;
+  padding-right: 50px;
+  margin-right: 50px;
+ }
+
   #about-top {
     display: flex;
   }
@@ -442,7 +455,7 @@ a:hover {
     display: block;
   }
   #up-right-arrow {
-    display: none;
+    display: block;
   }
   .mobile-lb {
     display: none;
