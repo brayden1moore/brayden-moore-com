@@ -119,11 +119,6 @@ body {
     padding-top: 10px;
     border: 1px solid black;
 }
-#head:hover {
-    background-color: white;
-    padding-top: 10px;
-    border: 1px solid black;
-}
 #down-left-arrow {
     transform: rotate(-210deg);
     height: 10px;
@@ -430,6 +425,31 @@ a:hover {
     -moz-transition: all 0.5s ease; 
     -ms-transition: all 0.5s ease; 
     -o-transition: all 0.5s ease; 
+}
+
+#social-div {
+  cursor: pointer;
+}
+
+
+.social-icon {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+.social-icon:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  /*filter: invert(93%) sepia(41%) saturate(3499%) hue-rotate(3deg) brightness(107%) contrast(105%);*/
+}
+
+.social-link {
+  border: none;
+}
+
+.social-link:hover{
+  background-color: white;
 }
 
 @media screen and (min-width: 500px) {
