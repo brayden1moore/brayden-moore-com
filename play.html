@@ -14,7 +14,7 @@
 
             <div class="a-play">
                 <div class="play-info">
-                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/citf-r.gif">
+                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/citf-r.png">
                     <p class="play-name larger-text">CUTS IN THE FOG</p>
                     Weekly experimental music mixes broadcast live on Monotonic Radio, Sundays 12 pacific 3 eastern. Available on <a href="https://www.youtube.com/playlist?list=PLbJFNczg9aumG4SAXuTSTnU4w9FHDm9dm" target="_blank">YouTube</a> and <a href="https://soundcloud.com/888bmo/sets/bmo-mixes?si=70065321b8bf4ebb92e0cc380ff16adc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">Soundcloud</a>.
                 </div>
@@ -22,7 +22,7 @@
 
             <div class="a-play">
                 <div class="play-info">
-                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/unsec-r.gif">
+                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/unsec-r.png">
                     <p class="play-name larger-text">UNSECURED CAMERA</p>
                     A website I started in 2023, <a target="_blank" href="https://unsecuredcamera.com">Unsecured Camera</a> provides a look through the lenses of exposed, internet-connected surveillance devices around the world.
                 </div>
@@ -30,7 +30,7 @@
 
             <div class="a-play">
                 <div class="play-info">
-                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/tuner-r.gif">
+                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/tuner-r.png">
                     <p class="play-name larger-text">TUNER</p>
                     A small physical device for streaming internet radio. It doubles as an Airplay receiver and is a work in progress!
                 </div>
@@ -38,7 +38,7 @@
 
             <div class="a-play">
                 <div class="play-info">
-                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/scudradio-r.gif">
+                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/scudradio-r.png">
                     <p class="play-name larger-text">iOS APP</p>
                     An iOS app I developed for streaming internet radio. Coming soon to the App Store.
                 </div>
@@ -46,7 +46,7 @@
              
             <div class="a-play">
                 <div class="play-info">
-                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/irp-r.gif">
+                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/irp-r.png">
                     <p class="play-name larger-text">PROTOCOL</p>
                     A centralized hub of up-to-the-minute internet radio data in <a href="https://internetradioprotocol.org" target="_blank">GUI</a> and <a href="https://internetradioprotocol.org/info" target="_blank">JSON</a> formats. It provides the backbone for my tuner and iOS app. 
                 </div>
@@ -55,7 +55,7 @@
             
             <div class="a-play">
                 <div class="play-info">
-                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/dadaset.gif">
+                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/dadaset.png">
                     <p class="play-name larger-text">MUSIC ON TAPE</p>
                     I'm compiling songs I've made, archiving shows on Monotonic Radio, and making mixes for myself and friends.</p>
                 </div>
@@ -70,5 +70,23 @@
     }
     window.addEventListener('load', resize);
     window.addEventListener('resize', resize);
+
+const playDivs = document.querySelectorAll(".a-play");
+playDivs.forEach(play => {
+    const playImg = play.querySelector('.play-img')
+    play.addEventListener('mouseover', () => {
+        playImg.src = playImg.src.replace(".png",".gif");
+    })
+    play.addEventListener('mouseout', () => {
+        playImg.src = playImg.src.replace(".gif",".png");
+    })
+
+    play.addEventListener('touchstart', () => {
+        playImg.src = playImg.src.replace(".png",".gif");
+    })
+    play.addEventListener('touchend', () => {
+        playImg.src = playImg.src.replace(".gif",".png");
+    })
+})
 </script>
 </html>
