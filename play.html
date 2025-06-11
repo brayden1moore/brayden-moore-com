@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Play - Brayden Moore</title>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body style="height: 100%; overflow: hidden;">
+    <div id="play"> 
+        <p class="header">PLAY</p>
+
+        <div id="play-table">
+
+            <div class="a-play">
+                <div class="play-info">
+                    <img class="play-img" src="static/citf-r.gif">
+                    <p>CUTS IN THE FOG<br><br>
+                    weekly experimental music mixes broadcast live on monotonic radio, sundays 12 pacific 3 eastern. available on <a href="https://www.youtube.com/playlist?list=PLbJFNczg9aumG4SAXuTSTnU4w9FHDm9dm" target="_blank">youtube</a> and <a href="https://soundcloud.com/888bmo/sets/bmo-mixes?si=70065321b8bf4ebb92e0cc380ff16adc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">soundcloud</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="a-play">
+                <div class="play-info">
+                    <img class="play-img" src="static/tuner-r.gif">
+                    <p>INTERNET RADIO TUNER<br><br>
+                    a small physical device for streaming internet radio. it doubles as an airplay receiver and is a work in progress!
+                    </p>
+                </div>
+            </div>     
+
+            <div class="a-play">
+                <div class="play-info">
+                    <img class="play-img" src="static/scudradio-r.gif">
+                    <p>SCUD RADIO<br><br>
+                    an iOS app i developed for streaming internet radio. not yet available in the app store.
+                    </p>
+                </div>
+            </div>
+
+            <div class="a-play">
+                <div class="play-info">
+                    <img class="play-img" src="static/unsec-r.gif">
+                    <p>UNSECURED CAMERA<br><br>
+                    a website i started in 2023, <a target="_blank" href="https://unsecuredcamera.com">unsecured camera</a> provides a look through the lenses of exposed, internet-connected surveillance devices around the world.
+                    </p>
+                </div>
+            </div>       
+             
+            <div class="a-play">
+                <div class="play-info">
+                    <img class="play-img" src="static/irp-r.gif">
+                    <p>INTERNET RADIO PROTOCOL<br><br>
+                    a centralized hub of up-to-the-minute internet radio data in <a href="https://internetradioprotocol.org" target="_blank">GUI</a> and <a href="https://internetradioprotocol.org/info" target="_blank">JSON</a> formats. it provides the backbone for my tuner and iOS app. 
+                    </p>
+                </div>
+            </div>              
+    
+            
+            <div class="a-play">
+                <div class="play-info">
+                    <img class="play-img" src="static/dadaset.gif">
+                    <p>MUSIC ON TAPE<br><br>
+                    i'm compiling songs i've made, archiving shows on monotonic radio, and making mixes for myself and friends.</p>
+                </div>
+            </div> 
+
+        </div>
+</body>
+<script>
+    function resize() {
+    var height = document.documentElement.scrollHeight;
+        parent.postMessage(['setHeight', height], '*');
+    }
+    window.addEventListener('load', resize);
+    window.addEventListener('resize', resize);
+</script>
+</html>

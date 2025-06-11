@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Work - Brayden Moore</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body style="height: 100%; overflow: hidden;">
+    <div id="work"> 
+        <p class="header">WORK</p>
+            <ul id="work-tag">
+                <li>many organizations use <u>outdated systems</u> that no longer fit their needs as they grow in size and creativity in donor outreach.<br><br></li>
+                <li>many also have heaps of old, fragmented, or dirty <u>data that they can no longer trust</u>.<br><br></li>
+                <li>i work with organizations' development, accounting, and information teams to understand their unique needs, lead tailored <u>data clean-ups</u>, <u>system migrations</u>, and <u>cloud service deployments</u> to achieve them, and design documentation to show how it all works.</li>
+            </ul>
+
+            <div id="orgs-wrapper-left" class="orgs-wrapper">
+                <div class="orgs">
+                    <div class="an-org">
+                        <img class="org-logo" src="static/vcf.jpg">
+                        <div class="org-info">
+                            VERMONT COMMUNITY FOUNDATION
+                        </div>
+                        <div class="work-description">full system transformation and support</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/gnof.png">
+                        <div class="org-info">
+                            greater new orleans foundation
+                        </div>
+                        <div class="work-description">data clean-up and integration consulting</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/if.png" style="background-color: maroon;">
+                        <div class="org-info">
+                            Initiative Foundation
+                        </div>
+                        <div class="work-description">data migration and training</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/cdln.png" style="background-color: orange;">
+                        <div class="org-info">
+                            Casa De Los Ninos
+                        </div> 
+                        <div class="work-description">data clean-up, migration and support</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/nmf.jpeg" style="background-color: orange;">
+                        <div class="org-info">
+                            New Mexico Foundation
+                        </div>
+                        <div class="work-description">system migration and integration</div>
+                    </div>
+                </div>
+            </div>
+            <div id="orgs-wrapper-right" class="orgs-wrapper">
+                <div class="orgs">
+                    <div class="an-org">
+                        <img class="org-logo" src="static/va.png">
+                        <div class="org-info">
+                            Vermont Adaptive
+                        </div>
+                        <div class="work-description">data clean-up, migration, and support</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/lcf.jpeg">
+                        <div class="org-info">
+                            Little City Foundation
+                        </div>
+                        <div class="work-description">full system transformation and integration</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/eac.jpg">
+                        <div class="org-info">
+                            Erie Arts and Culture
+                        </div>
+                        <div class="work-description">data migration</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/hch.png">
+                        <div class="org-info">
+                            Hope Children's Home
+                        </div>
+                        <div class="work-description">data migration and system integration</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/ocf.jpg">
+                        <div class="org-info">
+                            Oregon Community Foundation
+                        </div>
+                        <div class="work-description">system integration consulting</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/raf.png">
+                        <div class="org-info">
+                            Roof Above
+                        </div>
+                        <div class="work-description">data clean-up and system migration</div>
+                    </div>
+                    <div class="an-org">
+                        <img class="org-logo" src="static/gwcf.png">
+                        <div class="org-info">
+                            Greater Washington Foundation
+                        </div>
+                        <div class="work-description">current state analysis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="testimonials">
+            <div class="a-testimonial">"brayden, [...] you are such a quick learner and have a bright future ahead. your level of detail shows that you are <span class="highlight">one of the best in the business</span>." <br><br><span class="quote-attr">- jake gardner, vermont community foundation</span></div>
+            <div class="a-testimonial">"<span class="highlight">we LOVE brayden!!</span>"<br><br><span class="quote-attr">- kim slipy, initiative foundation</span></div>
+            <div class="a-testimonial">"shout out to brayden! he seamlessly blended into our meetings with clients, showcasing his <span class="highlight">knowledge and expertise</span> in virtuous. i appreciate your hard work!"<br><br><span class="quote-attr">- jillian findlay, npact</span></div>
+            <div class="a-testimonial">"<span class="highlight">3 cheers for brayden!</span> brayden provided expert troubleshooting with some tricky coding in intacct that now allows us to deliver a strong foundation cloud-intacct solution for our client."<br><br><span class="quote-attr">- roshan darji, cpa</span></div>
+            <div class="a-testimonial">"huge shoutout to brayden! thank you for <span class="highlight">really hearing us</span>, especially on our request with virtuous attributes and getting that resolved so quickly. this is exactly what we asked for!"<br><br><span class="quote-attr">- rachael miletkov, new mexico foundation</span></div>
+        </div>
+    </div>
+</body>
+<script>
+function resize() {
+    var height = document.documentElement.scrollHeight;
+    parent.postMessage(['setHeight', height], '*');
+}
+window.addEventListener('load', resize);
+window.addEventListener('resize', resize);
+
+function setupMarquee(wrapperId, direction = 'left') {
+  const wrapper = document.getElementById(wrapperId);
+  if (!wrapper) return;
+
+  const orgs = wrapper.querySelector('.orgs');
+  const originalItems = [...orgs.children];
+  
+  const clones = originalItems.map(item => item.cloneNode(true));
+  
+  if (direction === 'left') {
+    clones.forEach(clone => orgs.appendChild(clone));
+  } else {
+    clones.reverse().forEach(clone => orgs.insertBefore(clone, orgs.firstChild));
+  }
+
+  orgs.offsetHeight;
+  
+  const totalWidth = originalItems.reduce((sum, el) => {
+    const style = window.getComputedStyle(el);
+    const marginRight = parseFloat(style.marginRight) || 0;
+    return sum + el.offsetWidth + marginRight;
+  }, 0);
+  
+  const duration = totalWidth / 50; // 75px/sec
+  
+  const uid = Math.random().toString(36).substr(2, 5);
+  const animName = `scroll-${direction}-${uid}`;
+  
+  if (direction === 'left') {
+    orgs.style.transform = 'translateX(0)';
+  } else {
+    orgs.style.transform = 'translateX(-50%)';
+  }
+  
+  const style = document.createElement('style');
+  if (direction === 'left') {
+    style.textContent = `
+      @keyframes ${animName} {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    `;
+  } else {
+    style.textContent = `
+      @keyframes ${animName} {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
+    `;
+  }
+  document.head.appendChild(style);
+  
+  orgs.style.cssText += `
+    animation-name: ${animName};
+    animation-duration: ${duration}s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  `;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupMarquee('orgs-wrapper-left', 'left');
+  setupMarquee('orgs-wrapper-right', 'right');
+});
+
+</script>
+</html>

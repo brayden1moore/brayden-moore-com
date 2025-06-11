@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="BMo" />
+  <link rel="manifest" href="/static/site.webmanifest" />
+  
+    <meta charset="UTF-8" />
+    <title>Brayden Moore</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preload" href="static/citf.gif" as="image" type="image/gif"/>
+    <link rel="preload" href="static/scudradio.gif" as="image" type="image/gif"/>
+    <link rel="preload" href="static/irp.gif" as="image" type="image/gif"/>
+    <link rel="preload" href="static/unsec.gif" as="image" type="image/gif"/>
+    <link rel="preload" href="static/tuner.gif" as="image" type="image/gif"/>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Syne+Mono&display=swap" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</head>
+<body>
+  <div id="nav-bar">
+    <div class="nav-button" data-page="about.html">ABOUT</div>
+    <div class="nav-button" data-page="work.html">WORK</div>
+    <div class="nav-button" data-page="play.html">PLAY</div>
+    <div class="nav-button" data-page="contact.html">CONTACT</div>
+  </div>
+
+  <iframe id="main-frame" src="about.html"></iframe>
+
+  <div id="footer">
+    <div>
+      <a href="mailto:brayden@braydenmoore.com">brayden@braydenmoore.com</a><br>
+      this website was made by me<br>
+      thanks for visiting!
+    </div>
+  </div>
+
+<script>
+
+const frame = document.getElementById('main-frame');
+document.querySelectorAll('.nav-button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    frame.src = btn.dataset.page;
+    window.scrollTo(0, 0);
+  });
+});
+
+window.addEventListener('message', function(e) {
+    if (!Array.isArray(e.data)) return;
+    var eventName = e.data[0];
+    var data = e.data[1];
+    if (eventName === 'setHeight') {
+        document.getElementById("main-frame").style.height = data + 'px';
+    }
+    if (eventName === 'changePage') {
+        frame.src = data;
+    }
+}, false);
+
+</script>
+</html>
