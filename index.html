@@ -45,8 +45,22 @@ document.querySelectorAll('.nav-button').forEach(btn => {
   btn.addEventListener('click', () => {
     frame.src = btn.dataset.page;
     window.scrollTo(0, 0);
+
+    btn.style.backgroundColor = "yellow";
+    btn.style.color = "black";
+    setInterval(
+      function(){     
+        btn.style.backgroundColor = "black";
+        btn.style.color = "white"; },
+      100
+    );
   });
 });
+
+const logo = document.getElementById('logo');
+logo.addEventListener('click', () => {
+    frame.src = 'about.html';
+})
 
 window.addEventListener('message', function(e) {
     if (!Array.isArray(e.data)) return;

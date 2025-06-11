@@ -26,7 +26,7 @@ body {
     padding: var(--side-padding);
     width: calc(100% - var(--side-padding) * 2);
     padding-top: 50px;
-    margin-top: 180px;
+    margin-top: 200px;
     margin-bottom: 75px;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .nav-button {
-    font-size: 18pt;
+    font-size: 24pt;
     flex: 1;
     align-items: center;
     align-content: end;
@@ -60,6 +60,7 @@ body {
     color: white;
     border-left: 1px solid black;
     -webkit-tap-highlight-color: yellow;
+    transition: 0.2s;
 }
 .nav-button:hover {
     background-color: yellow;
@@ -128,7 +129,8 @@ body {
     display: none;
 }
 li {
-    margin-left: -20px;
+    margin-left: -40px;
+    list-style: none;
 }
 a {
     color: black;
@@ -241,9 +243,11 @@ a:hover {
 }
 
 .a-testimonial {
+    font-size: 18pt;
     width: calc(33% - 0.5rem);      
     padding: 1rem;  
     border: 1px black solid;
+    background-color: yellow;
     box-sizing: border-box;
     align-content: center;
 }
@@ -252,7 +256,12 @@ a:hover {
   background-color: yellow;
 }
 
+#work {
+  padding: 10px;
+}
+
 #work-tag {
+    font-size: 24pt;
     margin-bottom: 50px;
 }
 
@@ -422,10 +431,6 @@ a:hover {
 
     .a-testimonial {
         width: calc(100% - 0.5rem);      
-    }
-
-    .a-play {
-        width: calc(100% - 1rem);    
     }
 
 }
