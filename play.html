@@ -70,6 +70,7 @@
     }
     window.addEventListener('load', resize);
     window.addEventListener('resize', resize);
+    
 
 const playDivs = document.querySelectorAll(".a-play");
 playDivs.forEach(play => {
@@ -81,12 +82,20 @@ playDivs.forEach(play => {
         playImg.src = playImg.src.replace(".gif",".png");
     })
 
-    play.addEventListener('touchstart', () => {
+    play.addEventListener('click', () => {
         playImg.src = playImg.src.replace(".png",".gif");
     })
     play.addEventListener('touchend', () => {
         playImg.src = playImg.src.replace(".gif",".png");
     })
 })
+
+const touchHandler = (ev) => {
+	ev.preventDefault()
+}
+document.addEventListener('touchstart', touchHandler, {passive:false})
+document.addEventListener('touchmove', touchHandler, {passive:false})
+document.addEventListener('touchend', touchHandler, {passive:false})
+document.addEventListener('touchcancel', touchHandler, {passive:false})
 </script>
 </html>
