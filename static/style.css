@@ -391,9 +391,9 @@ a:hover {
   line-height: 1.3rem;
 }
 
-  #contact {
-    width: fit-content;
-  }
+#contact {
+  width: fit-content;
+}
 
 .contact-div:hover {
   background-color: yellow;
@@ -465,7 +465,7 @@ a:hover {
 
 @media screen and (min-width: 500px) {
   .a-play {
-    width: calc(50% - 1.5rem); 
+    width: calc(50% - 1rem); 
   }
 }
 
