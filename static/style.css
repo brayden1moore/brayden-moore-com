@@ -247,7 +247,7 @@ a:hover {
   background-color: black;
   text-align: center;
   color: white;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
 }
 
 .org-logo {
@@ -329,6 +329,11 @@ a:hover {
   }
 
 
+  .a-play:hover .play-img {
+    border: 1px solid white;
+  }
+  
+
 
   #play-table {
       user-select: none;
@@ -374,21 +379,17 @@ a:hover {
 }
 
 .a-play:hover a{
-  background-color: white;
-  color: black;
-}
-
-.a-play:hover a:hover{
   background-color: yellow;
   color: black;
 }
 
-.a-play:hover .play-name {
-  border-bottom: 1px solid white;
+.a-play:hover a:hover{
+  background-color: white;
+  color: black;
 }
 
-.a-play:hover .play-img {
-    border: 1px black solid;
+.a-play:hover .play-name {
+  border: 1px solid white;
 }
 
 
@@ -438,12 +439,12 @@ a:hover {
 }
 
 .easeload {
-    transition: all 0.5s ease;
+    transition: opacity 0.5s ease;
     opacity: 0;
-    -webkit-transition: all 0.5s ease; 
-    -moz-transition: all 0.5s ease; 
-    -ms-transition: all 0.5s ease; 
-    -o-transition: all 0.5s ease; 
+    -webkit-transition: opacity 0.5s ease; 
+    -moz-transition: opacity 0.5s ease; 
+    -ms-transition: opacity 0.5s ease; 
+    -o-transition: opacity 0.5s ease; 
 }
 
 #social-div {

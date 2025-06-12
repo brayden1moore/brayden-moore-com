@@ -73,22 +73,17 @@
 
 
 const playDivs = document.querySelectorAll(".a-play");
-playDivs.forEach(play => {
-    const playImg = play.querySelector('.play-img')
-    play.addEventListener('mouseover', () => {
-        playImg.src = playImg.src.replace(".png",".gif");
-    })
-    play.addEventListener('mouseout', () => {
-        playImg.src = playImg.src.replace(".gif",".png");
-    })
 
-    play.addEventListener('click', () => {
-        playImg.src = playImg.src.replace(".png",".gif");
-    })
-    play.addEventListener('touchend', () => {
-        playImg.src = playImg.src.replace(".gif",".png");
-    })
-})
+playDivs.forEach(play => {
+    const playImg = play.querySelector('.play-img');
+    const gifSrc = playImg.src.replace(".png", ".gif");
+
+    const gifImg = new Image();
+    gifImg.onload = () => {
+        playImg.src = gifSrc;
+    };
+    gifImg.src = gifSrc;
+});
 
 </script>
 </html>
