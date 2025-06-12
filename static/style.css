@@ -371,7 +371,7 @@ a:hover {
     box-sizing: border-box;
     justify-content: center; 
     background-color: white;
-    cursor: pointer;
+    cursor:crosshair;
 }
 
 .a-play:hover {
