@@ -97,6 +97,7 @@ function resize() {
 }
 window.addEventListener('load', resize);
 window.addEventListener('resize', resize);
+setInterval(resize, 1000);
 
 const foundationsText = document.getElementById('foundations-text');
 foundationsText.addEventListener('click', () => {
