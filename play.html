@@ -2,77 +2,52 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Fun - Brayden Moore</title>
+    <title>Play - Brayden Moore</title>
     <link rel="stylesheet" href="static/style.css">
 
 </head>
 <body style="height: 100%; overflow: hidden;">
     <div id="play"> 
-        <p class="header">FUN</p>
+        <p class="header">Play</p>
 
         <div id="play-table">
-            <div class="a-play">
-                <div class="play-info">
-                    <a href="https://internetradioprotocol.org" target="_blank">
-                        <img class="play-img easeload" onload="this.style.opacity=1" src="static/irp-r.png">
-                    </a>
-                    <p class="play-name larger-text">INTERNET RADIO PROTOCOL</p>
-                    A centralized hub of up-to-the-minute internet radio data that I maintain in <a href="https://internetradioprotocol.org" target="_blank">GUI</a> and <a href="https://internetradioprotocol.org/info" target="_blank">JSON</a> formats. It provides the backbone for my tuner and iOS app. 
-                </div>
-            </div>      
 
             <div class="a-play">
                 <div class="play-info">
-                    <a href="https://unsecuredcamera.com" target="_blank">
-                        <img class="play-img easeload" onload="this.style.opacity=1" src="static/unsec-r.png">
-                    </a>
-                    <p class="play-name larger-text">UNSECURED CAMERA</p>
-                    A website I started in 2023, <a target="_blank" href="https://unsecuredcamera.com">Unsecured Camera</a> provides a look through the lenses of exposed, internet-connected surveillance devices around the world.
+                    <a href="https://instagram.com/scudradios" target="_blank" style="border-bottom: none; background: none;">
+                        <img class="play-img easeload" onload="this.style.opacity=1" src="static/scudradio.jpeg">
+                    </a>  
+                    <p class=" play-name larger-text">House Radio</p>
+                    A physical device for integrating internet radio streaming into the home. Designed, programmed, soldered, and constructed by me. 
                 </div>
             </div>    
 
-            <div class="a-play">
-                <div class="play-info">
-                    <a href="https://monotonicradio.com" target="_blank">
-                        <img class="play-img easeload" onload="this.style.opacity=1" src="static/citf-r.png">
-                    </a>   
-                    <p class="play-name larger-text">MONOTONIC RADIO</p>
-                    Weekly experimental music mixes broadcast live on <a href="https://monotonicradio.com" target="_blank">Monotonic Radio</a>, Sundays 12 pacific 3 eastern. Archived on <a href="https://www.youtube.com/playlist?list=PLbJFNczg9aumG4SAXuTSTnU4w9FHDm9dm" target="_blank">YouTube</a> and <a href="https://soundcloud.com/bmobmobmobmobmo/sets/bmo-mixes" target="_blank">Soundcloud</a>.
-                </div>
-            </div>
 
             <div class="a-play">
                 <div class="play-info">
-                    <a href="https://instagram.com/scud.works" target="_blank">
-                        <img class="play-img easeload" onload="this.style.opacity=1" src="static/tuner-r.png">
-                    </a>  
-                    <p class="play-name larger-text">SCUD RADIO TUNER</p>
-                    A small physical device I am building for integrating internet radio streaming into the home. 
+                    <a href="https://one-radio.com" target="_blank"  style="border-bottom: none; background: none;">
+                        <img class="play-img easeload" onload="this.style.opacity=1" src="static/oneradio.jpg">
+                    </a>
+                    <p class=" play-name larger-text">One Radio</p>
+                    A centralized hub of up-to-the-minute internet radio data for a curated list of the world's best stations, maintained in <a href="https://one-radio.com" target="_blank">GUI</a> and <a href="https://one-radio.com/info" target="_blank">JSON</a> formats. 
                 </div>
-            </div>     
+            </div>       
 
             <div class="a-play">
                 <div class="play-info">
-                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/scudradio-r.png">
-                    <p class="play-name larger-text">SCUD RADIO APP</p>
-                    An iOS app I am developing for streaming internet radio. Coming soon to the App Store.
+                    <a href="https://unsecuredcamera.com" target="_blank"  style="border-bottom: none; background: none;">
+                        <img class="play-img easeload" onload="this.style.opacity=1" src="static/unsec2.png">
+                        <p class=" play-name larger-text">Unsecured Camera</p>
+                        A look through the lenses of exposed, internet-connected surveillance devices around the world.
+                    </a>
                 </div>
-            </div>           
-    
-            
-            <div class="a-play">
-                <div class="play-info">
-                    <img class="play-img easeload" onload="this.style.opacity=1" src="static/dadaset-r.png">
-                    <p class="play-name larger-text">MUSIC ON TAPE</p>
-                    I'm compiling songs I've made, archiving shows on Monotonic Radio, and making mixes for myself and friends.</p>
-                </div>
-            </div> 
+            </div>    
 
         </div>
 </body>
 <script>
     function resize() {
-    var height = document.documentElement.scrollHeight;
+    var height = document.documentElement.offsetHeight;
         parent.postMessage(['setHeight', height], '*');
     }
     window.addEventListener('load', resize);

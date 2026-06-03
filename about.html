@@ -7,7 +7,7 @@
 </head>
 <body style="height: 100%; overflow: hidden;">
     <div id="about">
-      <p class="header">ABOUT</p>
+      <p class="header">About</p>
       <div id="about-top">
 
         <div id="name-and-face">
@@ -17,28 +17,30 @@
             <img id="down-left-arrow" src="static/arrow.svg"></img>
 
             <div id="first-line">
-                <u class="highlight larger-text">BRAYDEN MOORE</u><br>
+                <u class="highlight larger-text">Brayden Moore</u><br>
                 <p>Is <span id="age"></span>, living in San Francisco via Providence via Prague via New York via Vermont.</p>
                 <div id="social-div">
-                    <a class="social-link" href="mailto:brayden@braydenmoore.com" target="_blank"><img class="social-icon" src="static/m-t-w.svg"></a>
+                    <span id="copy-email">copy email</a>
                 </div>
             </div>
         </div>
           
         <div id="intro-div">
-            <span class="highlight larger-text">WORK</span><br>
+            <span class="highlight larger-text">Work</span><br>
             <ul>
               <li>Cleaning, migrating, and integrating data systems for non-profit <a id="foundations-text">foundations</a>, and managing ~1,600 acres of <a target="_blank" href="https://member.alaforestry.org/members/default.asp?id=27215454">forest land</a> in Northern Alabama.<br><br></li>
             </ul>
-            <span class="highlight larger-text">FUN</span><br>
+            <div class="divider"></div>
+            <span class="highlight larger-text">Play</span><br>
             <ul>
-              <li>Making devices and apps for listening to and standardizing information for <a href="https://internetradioprotocol.org" target="_blank">internet radio</a>, maintaining <a href="https://unsecuredcamera.com" target="_blank">unsecuredcamera.com</a>, and spinning and recording <a href="https://www.youtube.com/playlist?list=PLbJFNczg9aumG4SAXuTSTnU4w9FHDm9dm" target="_blank">mixes</a> for friends and fun.<br><br></li>
+              <li>Making devices and apps for listening to and standardizing information for <a href="https://one-radio.com" target="_blank">internet radio</a>, maintaining <a href="https://unsecuredcamera.com" target="_blank">unsecuredcamera.com</a>, and spinning and recording <a href="https://www.youtube.com/playlist?list=PLbJFNczg9aumG4SAXuTSTnU4w9FHDm9dm" target="_blank">mixes</a> for friends and fun.<br><br></li>
             </ul>
-              <span class="highlight larger-text">TOOLS</span><br>
+              <div class="divider"></div>
+              <span class="highlight larger-text">Tools</span><br>
             <ul>
-              <li>Programming: Python (Pandas, Flask, FastAPI, PIL, BeautifulSoup, Selenium), Bash, nginx, systemd, Javascript, HTML, CSS, SQL, DigitalOcean, XCode<br><br></li>
-              <li>Systems / APIs: Salesforce, Candid (Guidestar), Sage Intacct (certified implementer), GoFundMePro (fka Classy), Virtuous<br><br></li>
-              <li>Creativity: Figma, Ableton, Rekordbox, FinalCutPro<br><br></li>
+              <li><span class="underline">Programming</span>: Python (Pandas, Flask, FastAPI, PIL, BeautifulSoup, Selenium), Bash, nginx, systemd, Javascript, HTML, CSS, SQL, DigitalOcean, XCode<br><br></li>
+              <li><span class="underline">Systems / APIs</span>: Salesforce, Sage Intacct (certified implementer), Raiser's Edge, Candid (Guidestar), GoFundMePro (fka Classy), Virtuous<br><br></li>
+              <li><span class="underline">Creativity</span>: Figma, Ableton, Rekordbox<br><br></li>
             </ul>
         </div>
       </div>
@@ -90,7 +92,8 @@ updateAge();
 
 <script>
 function resize() {
-    var height = document.documentElement.scrollHeight;
+    var height = document.documentElement.offsetHeight;
+    console.log(height);
     parent.postMessage(['setHeight', height], '*');
 }
 window.addEventListener('load', resize);
@@ -111,6 +114,17 @@ socialIcons.forEach(icon => {
         icon.src = icon.src.replace("-t-b","-t-w");
     })
 })
+
+const emailCopy = document.getElementById('copy-email');
+emailCopy.addEventListener('click', () => {
+  navigator.clipboard.writeText('brayden@braydenmoore.com');
+  emailCopy.textContent = 'copied!';
+  emailCopy.classList.add('copied');
+  setTimeout(() => {
+    emailCopy.textContent = 'copy email';
+    emailCopy.classList.remove('copied');
+  }, 5000);
+});
 
 </script>
 

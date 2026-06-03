@@ -22,20 +22,22 @@
 <body>
   <div id="top-bar">
     <img id="logo" src="static/icon.png"></img>
-      <div class="nav-button" data-page="about.html">ABOUT</div>
-      <div class="nav-button" data-page="work.html">WORK</div>
-      <div class="nav-button" data-page="play.html">FUN</div>
-      <div class="nav-button" data-page="contact.html">CONTACT</div>
+      <div class="nav-button" data-page="about.html">About</div>
+      <div class="nav-button" data-page="work.html">Work</div>
+      <div class="nav-button" data-page="play.html">Play</div>
+      <div class="nav-button" data-page="contact.html">Contact</div>
   </div>
 
   <iframe id="main-frame" src="about.html"></iframe>
 
+  <!--
   <div id="footer">
     <div>
       This website was made by me, <a href="mailto:brayden@braydenmoore.com">brayden@braydenmoore.com</a>.<br>
       Thanks for visiting!
     </div>
   </div>
+  -->
 
 <script>
 
@@ -64,6 +66,7 @@ const logo = document.getElementById('logo');
 logo.addEventListener('click', () => {
     frame.src = 'about.html';
 })
+
 
 window.addEventListener('message', function(e) {
     if (!Array.isArray(e.data)) return;
