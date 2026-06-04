@@ -126,6 +126,14 @@ emailCopy.addEventListener('click', () => {
   }, 5000);
 });
 
+const head = document.getElementById('head');
+head.addEventListener('mouseover', () => {
+  head.src = 'static/scudhead.gif';
+})
+head.addEventListener('mouseleave', () => {
+  head.src = 'static/bmosubjectcolor2.png';
+})
+
 </script>
 
 </html>
