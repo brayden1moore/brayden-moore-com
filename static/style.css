@@ -124,8 +124,7 @@ body {
 #head {
     width: 125px;
     height: fit-content;
-    background-color: yellow;
-    padding-top: 10px;
+    padding-top: 0px;
     border: 1px solid black;
 }
 #down-left-arrow {

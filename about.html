@@ -118,7 +118,7 @@ socialIcons.forEach(icon => {
 const emailCopy = document.getElementById('copy-email');
 emailCopy.addEventListener('click', () => {
   navigator.clipboard.writeText('brayden@braydenmoore.com');
-  emailCopy.textContent = 'copied!';
+  emailCopy.textContent = 'copied';
   emailCopy.classList.add('copied');
   setTimeout(() => {
     emailCopy.textContent = 'copy email';
